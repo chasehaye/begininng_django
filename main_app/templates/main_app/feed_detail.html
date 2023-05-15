@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Feed Details</h1>
+
+<div class="row">
+  <div class="col s6 col-offset-3">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ feed.name }}</span>
+        <p>Type: {{ feed.type }}</p>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'feeds_update' feed.id %}">Edit</a>
+        <a href="{% url 'feeds_delete' feed.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
